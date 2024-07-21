@@ -1,0 +1,24 @@
+name: HTTP to MQTT
+version: 0.1.0
+slug: http2mqtt
+description: Publish MQTT topic via HTTP POST request.
+url: https://github.com/igorok107/hassio_addons
+startup: services
+arch:
+- aarch64
+- amd64
+- armhf
+- armv7
+- i386
+ports:
+  2883/tcp: 2883
+options:
+  mqtt_host: 192.168.1.100
+  mqtt_port: 1883
+  mqtt_user: mqtt_user
+  mqtt_password: mqtt_pass
+schema:
+  mqtt_host: str
+  mqtt_port: int
+  mqtt_user: str
+  mqtt_password: str
