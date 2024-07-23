@@ -23,7 +23,7 @@ mqtt_password: mqtt_pass
 
 ### Option: `mqtt_host`
 
-The `mqtt_host` option is the ip address of your mqtt server. If you are using the embeded server in Home Assistant just use your instances ip address or mqtt://core-mosquitto.
+The `mqtt_host` option is the ip address of your mqtt server. If you are using the embeded server in Home Assistant just use your instances ip address.
 
 ### Option: `mqtt_user`
 
@@ -33,6 +33,14 @@ This is the username required to access your mqtt server.
 
 The password of the mqtt user account.
 
+## Using
+Use HTTP POST Request to http://HAhost:2883/mqtt for publish MQTT topic.
+Post data contains params: `topic`, `payload`.
+
+For testing:
+```bash
+wget -4 -q "http://homeassistant.local:2883/mqtt" --post-data="topic=http2mqtt/test&payload={\"event\":\"Test\",\"action\":\"TestAction\"}" -O -
+```
 ## Known issues and limitations
 
 - This add-on is totally beta. 
