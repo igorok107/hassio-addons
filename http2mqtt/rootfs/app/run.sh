@@ -21,4 +21,4 @@ bashio::log.info "MQTT User =" $MQTT_USERNAME
 bashio::log.info "MQTT Password =" $(echo $MQTT_PASSWORD | sha256sum | cut -f1 -d' ')
 bashio::log.blue ":::::::: Starting HTTP2MQTT ::::::::"
 
-python3 /app/http2mqtt.py
+gunicorn --bind :2883 http2mqtt:app

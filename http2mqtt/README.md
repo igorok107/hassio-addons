@@ -15,7 +15,7 @@ Then search for `HTTP to MQTT` and install it.
 Example add-on configuration:
 
 ```yaml
-mqtt_host: 192.168.1.100
+mqtt_host: homeassistant
 mqtt_port: 1883
 mqtt_user: mqtt_user
 mqtt_password: mqtt_pass

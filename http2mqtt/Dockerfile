@@ -1,12 +1,11 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-#RUN adduser -D builder
 WORKDIR /app
 
 # Define environment variables
 # Use this variable when creating a container to specify the MQTT broker host.
-ENV MQTT_HOST="192.168.1.100" \
+ENV MQTT_HOST="homeassistant" \
     MQTT_PORT=1883 \
     MQTT_USERNAME="mqtt_user" \
     MQTT_PASSWORD="mqtt_pass"
